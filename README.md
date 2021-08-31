@@ -1,9 +1,9 @@
-- [Hottest city.](#hottest-city)
+- [Hottest city](#hottest-city)
   - [How to deploy](#how-to-deploy)
   - [Example](#example)
-  - [Reasoning](#reasoning)
+- [Reasoning](#reasoning)
 
-# Hottest city.
+# Hottest city
 
 Application to find a big city with the highest temperature.
 
@@ -16,7 +16,7 @@ Application to find a big city with the highest temperature.
   POSTGRES_HOST=localhost
   POSTGRES_PORT=5432
   POSTGRES_DB=example
-  OPENWEATHER_TOKEN=67b5b992f75ad1be9b2becb87ca0f49f
+  OPENWEATHER_TOKEN=<your open https://openweathermap.org token>
   ```
 
 2. Run the database
@@ -43,6 +43,6 @@ Application to find a big city with the highest temperature.
 
 Ahvaz Iran 46.97
 
-## Reasoning
+# Reasoning
 
 It is just an example of `asyncio` usage.
