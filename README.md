@@ -25,12 +25,13 @@ Application to find a big city with the highest temperature.
   ```
 
 3. Go to environment
-   ```
-   pipenv shell
-   ```
+  ```
+  pipenv shell
+  ```
 
 4. Fill the database
   ```
+  for line in $(cat .env); do export $line; done
   PYTHONPATH=$(pwd):$PYTHONPATH python hottest/scripts/fill_cities.py
   ```
 
