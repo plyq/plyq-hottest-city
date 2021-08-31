@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+requests = "*"
+flask = "*"
+flask-sqlalchemy = "*"
+psycopg2 = "*"
+pandas = "*"
+aiohttp = "*"
+
+[dev-packages]
+pytest = "*"
+pytest-cov = "*"
+black = "*"
+isort = "*"
+autoflake = "*"
+
+[requires]
+python_version = "3.8"
