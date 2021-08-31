@@ -24,16 +24,18 @@ Application to find a big city with the highest temperature.
   docker-compose up --build -d
   ```
 
-3. Fill the database
+3. Go to environment
+   ```
+   pipenv shell
+   ```
+
+4. Fill the database
   ```
-  pipenv shell
   PYTHONPATH=$(pwd):$PYTHONPATH python hottest/scripts/fill_cities.py
-  exit
   ```
 
-4. Run the app
+5. Run the app
   ```
-  pipenv shell
   FLASK_APP=hottest/app.py flask run
   ```
 
