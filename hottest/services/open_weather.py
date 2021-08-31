@@ -31,7 +31,10 @@ class OpenWeatherService(hs.WeatherService):
                 },
             ) as response:
                 weather = await response.json()
-        return weather["main"]["temp"]
+        try:
+            return weather["main"]["temp"]
+        except KeyError:
+            raise ConnectionError(weather["message"])
 
     async def get_city_id(self, city: str) -> Optional[str]:
         try:

@@ -40,5 +40,8 @@ async def _find(service_name: str) -> str:
 
 @app.route("/<service_name>", methods=["GET"])
 def find(service_name: str) -> Tuple[str, int]:
-    max_temp = asyncio.run(_find(service_name))
+    try:
+        max_temp = asyncio.run(_find(service_name))
+    except ConnectionError as exc:
+        return str(exc), 429
     return str(max_temp), 200
